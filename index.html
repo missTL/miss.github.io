@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <title>小仙女，今天吃什么呀</title>
+    <style>
+        body {
+            background-color: rgb(224, 192, 160);
+        }
+
+        #app {
+            height: 100VH;
+            background-image: url("images/2.jpg");
+            background-position: 50% center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(90px);
+            opacity: 0.6;
+        }
+
+        .btn {
+            /* 文字颜色 */
+            color: #0099CC;
+            /* 清除背景色 */
+            background: transparent;
+            /* 边框样式、颜色、宽度 */
+            border: 2px solid #0099CC;
+            /* 给边框添加圆角 */
+            border-radius: 6px;
+            /* 字母转大写 */
+            border: none;
+            color: rgb(229, 221, 221);
+            padding: 16px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-right: 4px;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+        }
+
+        /* 悬停样式 */
+        .btn:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">小仙女，今天吃什么呀</h1>
+    <div style="border: 1px rgb(15, 15, 15) solid;" id="root">
+        <button class="btn" @click="lunch">今天吃什么</button>
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=1844618280&site=qq&menu=yes">
+            <input class="btn" type=button value="点我去找男孩">
+        </a>
+        <a href="https://cupfox.app/">
+            <button class="btn">📺影视</button>
+        </a>
+        <a href="/images/1.jpg">
+            <button class="btn">🔞你懂的🈲</button>
+        </a>
+        <!-- <h3>{{meal}}</h3> -->
+    </div>
+    <div id="app"></div>
+    <script>
+        const app = new Vue({
+            el: "#root",
+            data: {
+                meal: "",
+                list2: [
+                    { id: 1, name: "我的男孩呀😍😍" },
+                    { id: 2, name: "小蛋糕" },
+                    { id: 3, name: "奶茶" },
+                    { id: 4, name: "干锅" },
+                    { id: 5, name: "铁板里脊" },
+                    { id: 6, name: "瓦香鸡" },
+                    { id: 7, name: "花甲米线" },
+                    { id: 8, name: "小面" },
+                    { id: 9, name: "凉皮凉面" },
+                    { id: 10, name: "泡椒猪肝" },
+                    { id: 11, name: "意面" },
+                    { id: 12, name: "冒菜" },
+                    { id: 13, name: "新疆炒米粉" },
+                    { id: 14, name: "自选餐" },
+                    { id: 15, name: "炸鸡汉堡" },
+                    { id: 16, name: "烤鸭饭" },
+                    { id: 17, name: "烤肉饭" },
+                    { id: 18, name: "炒饭" },
+                    { id: 19, name: "炒粉" },
+                    { id: 20, name: "热德卤" },
+                    { id: 21, name: "肉蟹煲" },
+                    { id: 22, name: "焗饭" },
+                    { id: 23, name: "水果" },
+                ],
+            },
+            methods: {
+                lunch(event) {
+                    var len = this.list2.length;
+                    this.meal = this.list2[Math.floor(Math.random() * len)].name;
+                    alert("小仙女今天吃: " + this.meal + "，或者遵循美食家的本心🤤🤤");
+                }
+            },
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/2.0.4/canvas-nest.js"></script>
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.halo.min.js"></script>
+    <script>
+        VANTA.HALO({
+            el: "#your-element-selector",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00
+        })
+    </script>
+</body>
+
+</html>
